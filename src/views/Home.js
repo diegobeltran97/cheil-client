@@ -13,7 +13,7 @@ export default function Home() {
 
     useEffect(() => {
        const fetchCards = async () => {
-         const response = await fetch('http://localhost:3000/api/');
+         const response = await fetch('http://localhost:3001/api/');
          const data = await response.json();
          setCards(data);
          setComputedCards(data);
@@ -66,8 +66,8 @@ export default function Home() {
                      name={card.name_hotel}
                      price={card.price_hotel}
                      category={card.category}
-                     hotelImage={card.image_hotel}
                      raiting={card.raiting}
+                     image={card.image}
                      
                     />
                  ))}
